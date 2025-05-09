@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+    <h3>{{ country.name }} ({{ country.cca2 }})</h3>
+    <p><strong>Capital:</strong> {{ country.capital }}</p>
+    <p><strong>Region:</strong> {{ country.region }}</p>
+    <p><strong>Languages:</strong> {{ country.languages }}</p>
+    <p><strong>Timezone:</strong> {{ country.timezone }}</p>
+
+    <h5>Same Region Countries</h5>
+    <ul>
+        {% for c in same_region %}
+        <li>{{ c.name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
